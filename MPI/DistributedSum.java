@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 import mpi.MPI;
 
 public class DistributedSum {
@@ -46,7 +48,7 @@ public class DistributedSum {
             partialSum += array[i];
         }
 
-        System.out.println("Partial sum at rank " + rank + ": " + partialSum);
+        System.out.println("Received partial array at rank " + rank + ": " + Arrays.toString(Arrays.copyOfRange(array, start, end)) + ", partial sum = " + partialSum);
 
         // Reduce all partial sums to get the total sum (sent to rank 0)
         int[] totalSum = new int[1];
