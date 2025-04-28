@@ -1,0 +1,13 @@
+module CalculatorModule {
+
+    interface Calculator {
+
+        long add(in long num1, in long num2);
+
+        long subtract(in long num1, in long num2);
+
+        long multiply(in long num1, in long num2);
+
+        float divide(in long num1, in long num2);
+    };
+};
