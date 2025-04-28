@@ -1,0 +1,7 @@
+module ReverseModule {
+
+    interface StringOperations {
+
+        string reverse(in string str);
+    };
+};
